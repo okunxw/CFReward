@@ -1,6 +1,8 @@
 package me.okunxw.cfreward;
 
 import me.okunxw.cfreward.commands.PromoCommand;
+import me.okunxw.cfreward.commands.PromoGUICommand;
+import me.okunxw.cfreward.gui.PromoGUI;
 import me.okunxw.cfreward.utils.ConfigManager;
 import me.okunxw.cfreward.utils.PromoManager;
 import net.milkbowl.vault.economy.Economy;
@@ -22,11 +24,11 @@ public class CFReward extends JavaPlugin {
         saveDefaultConfig();
         configManager = new ConfigManager(this);
         promoManager = new PromoManager(this);
-        
+
         if (!setupEconomy()) {
             getLogger().warning("[CFReward] Vault не найден! Экономическая система отключена.");
         }
-        
+
         registerCommands();
         registerEvents();
         getLogger().info("[CFReward] Плагин успешно загружен!");
@@ -38,12 +40,13 @@ public class CFReward extends JavaPlugin {
     }
 
     private void registerCommands() {
-        getCommand("promo").setExecutor((CommandExecutor) new PromoCommand(this));
+        getCommand("promo").setExecutor(new PromoCommand(this));
+        getCommand("openpromo").setExecutor(new PromoGUICommand());
     }
 
     private void registerEvents() {
         PluginManager pm = Bukkit.getPluginManager();
-        // pm.registerEvents(new ExampleListener(this), this); // Если понадобятся события
+        pm.registerEvents(new PromoGUI(), this);
     }
 
     private boolean setupEconomy() {
@@ -57,19 +60,19 @@ public class CFReward extends JavaPlugin {
         econ = rsp.getProvider();
         return econ != null;
     }
-    
+
     public static CFReward getInstance() {
         return instance;
     }
-    
+
     public PromoManager getPromoManager() {
         return promoManager;
     }
-    
+
     public ConfigManager getConfigManager() {
         return configManager;
     }
-    
+
     public static Economy getEconomy() {
         return econ;
     }
