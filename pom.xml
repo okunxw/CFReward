@@ -26,7 +26,7 @@
             <scope>provided</scope>
         </dependency>
 
-        <!-- Vault (для денег) -->
+        <!-- Vault (для экономики) -->
         <dependency>
             <groupId>net.milkbowl.vault</groupId>
             <artifactId>VaultAPI</artifactId>
@@ -34,7 +34,7 @@
             <scope>provided</scope>
         </dependency>
 
-        <!-- LuckPerms (для прав) -->
+        <!-- LuckPerms (для системы прав) -->
         <dependency>
             <groupId>net.luckperms</groupId>
             <artifactId>api</artifactId>
@@ -63,10 +63,4 @@
                         <phase>package</phase>
                         <goals>
                             <goal>shade</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
-    </build>
-</project>
+                        </go0
