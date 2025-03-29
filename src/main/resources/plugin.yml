@@ -1,11 +1,26 @@
 name: CFReward
-version: 1.0.0
 main: me.okunxw.cfreward.CFReward
+version: 1.0.0
+description: "Плагин для управления промокодами на сервере Minecraft."
+author: okunxw
+website: "https://github.com/okunxw/CFReward"
+
 api-version: 1.16
-authors: [okunxw]
-description: Плагин для управления промокодами
+
+depend:
+  - Vault
+softdepend:
+  - LuckPerms
+  - PlaceholderAPI
+
 commands:
   cfreward:
-    description: Основная команда для управления промокодами
-    usage: /<command> [args]
-    aliases: [cfr]
+    description: "Основная команда для управления промокодами."
+    usage: "/cfreward <подкоманда>"
+    aliases: [cf, promo]
+    permission: cfreward.admin
+
+permissions:
+  cfreward.admin:
+    description: "Доступ к управлению промокодами."
+    default: op
