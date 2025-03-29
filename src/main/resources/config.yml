@@ -1,0 +1,19 @@
+settings:
+  storage: "yaml" # yaml или json
+  global-limit: 5 # Сколько раз можно использовать промокод глобально
+  expire-check-interval: 600 # Интервал проверки истечения кодов (в секундах)
+
+messages:
+  prefix: "&6[CFReward] &r"
+  promo-redeemed: "&aВы успешно активировали промокод!"
+  promo-expired: "&cЭтот промокод истёк!"
+  promo-limit-reached: "&cЭтот промокод больше нельзя использовать!"
+  no-permission: "&cУ вас нет прав на выполнение этой команды!"
+  unknown-command: "&cНеизвестная команда. Используйте: /cfreward help"
+
+promocodes:
+  welcome:
+    reward-commands:
+      - "give %player% diamond 1"
+    global-uses: 10
+    expires: "2025-12-31 23:59:59"
