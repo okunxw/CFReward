@@ -1,0 +1,7 @@
+messages:
+  prefix: "&6[CFReward] &r"
+  promo-redeemed: "&aВы успешно активировали промокод!"
+  promo-expired: "&cЭтот промокод истёк!"
+  promo-limit-reached: "&cЭтот промокод больше нельзя использовать!"
+  no-permission: "&cУ вас нет прав на выполнение этой команды!"
+  unknown-command: "&cНеизвестная команда. Используйте: /cfreward help"
