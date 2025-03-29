@@ -42,6 +42,7 @@ public class CFReward extends JavaPlugin {
     private void registerCommands() {
         getCommand("promo").setExecutor(new PromoCommand(this));
         getCommand("openpromo").setExecutor(new PromoGUICommand());
+        getCommand("promogui").setExecutor(new PromoGUICommand());
     }
 
     private void registerEvents() {
