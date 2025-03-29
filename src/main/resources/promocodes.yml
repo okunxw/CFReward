@@ -1,0 +1,11 @@
+# CFReward - Уникальный плагин от okunxw
+# Файл хранения промокодов
+
+promocodes:
+  example_code:
+    rewards:
+      - "money:1000"
+      - "item:DIAMOND 3"
+      - "permission:vip"
+    uses: 10
+    expires: "2025-12-31 23:59:59"
