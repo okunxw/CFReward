@@ -25,6 +25,11 @@ commands:
     usage: "/openpromo"
     permission: cfreward.use
 
+promogui:
+    description: "Открывает GUI с промокодами."
+    usage: "/promogui"
+    permission: cfreward.gui
+
 permissions:
   cfreward.admin:
     description: "Доступ к управлению промокодами."
@@ -32,4 +37,8 @@ permissions:
 
   cfreward.use:
     description: "Разрешает использование GUI меню промокодов."
+    default: true
+
+    cfreward.gui:
+    description: "Позволяет игрокам открывать GUI с промокодами."
     default: true
