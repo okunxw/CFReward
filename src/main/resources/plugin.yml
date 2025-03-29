@@ -1,0 +1,11 @@
+name: CFReward
+version: 1.0.0
+main: me.okunxw.cfreward.CFReward
+api-version: 1.16
+authors: [okunxw]
+description: Плагин для управления промокодами
+commands:
+  cfreward:
+    description: Основная команда для управления промокодами
+    usage: /<command> [args]
+    aliases: [cfr]
