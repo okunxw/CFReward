@@ -20,8 +20,16 @@ commands:
     aliases: [cf, promo]
     permission: cfreward.admin
 
+  openpromo:
+    description: "Открывает меню промокодов."
+    usage: "/openpromo"
+    permission: cfreward.use
+
 permissions:
   cfreward.admin:
     description: "Доступ к управлению промокодами."
-    default: 
- 
+    default: op
+
+  cfreward.use:
+    description: "Разрешает использование GUI меню промокодов."
+    default: true
