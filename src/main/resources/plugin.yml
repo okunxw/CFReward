@@ -23,4 +23,5 @@ commands:
 permissions:
   cfreward.admin:
     description: "Доступ к управлению промокодами."
-    default: op
+    default: 
+ 
